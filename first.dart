@@ -15,7 +15,7 @@ class Person {
   }
 }
 
-void main() {
+void main() async {
   print("hello, world");
 
   // Explicite data type
@@ -65,4 +65,64 @@ void main() {
   );
   person1.greet();
   person1.president();
+// Lists
+  var numbers = [1, 2, 3, 4];
+  print(numbers[0]);
+
+  var fruits = ['apple', 'banana'];
+  fruits.add('orange');
+  print(fruits);
+
+  // sets
+  var cities = {'Lahore', 'Faisalabad', 'Islamabad'};
+  cities.add('Karachi');
+  print(cities);
+
+  // Maps
+  var phoneBook = {"Rana": "0322", "mian": "0333", "Jutt": "0344"};
+  print(phoneBook["Rana"]);
+  phoneBook["Sheikh"] = "0355";
+  print(phoneBook);
+
+  String? name2;
+  var defaultName = "Guest";
+  print(name2 ?? defaultName);
+
+  name2 = "Muzammil";
+  print(name2);
+
+  // asynchronous
+
+  Future<String> fetchData() async {
+    await Future.delayed(Duration(seconds: 2));
+    return "Data Loaded";
+  }
+
+  print("Fetching Data ...");
+  String data = await fetchData();
+  print(data);
+
+  Stream<int> number1 = Stream.fromIterable([1, 2, 3, 4, 5]);
+
+  await for (int number in number1) {
+    print(number);
+  }
+
+  // error handling
+
+  try {
+    int result = 12 ~/ 0;
+    print(result);
+  } catch (e) {
+    print("Error: $e");
+  }
+
+  var names = [
+    "muzammil",
+    'ahmad',
+    'ali',
+    'hunain',
+  ];
+  names.add('Rana');
+  print(names);
 }

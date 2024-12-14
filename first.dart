@@ -1,3 +1,6 @@
+import 'dart:math';
+import 'dart:io';
+
 class Person {
   String name;
   int age;
@@ -125,4 +128,18 @@ void main() async {
   ];
   names.add('Rana');
   print(names);
+
+  var numbers1 = [1, 2, 3];
+  print(numbers1);
+  print(numbers1.join(' '));
+
+  double sqof = sqrt(16);
+  print(sqof);
+
+  int rannum = Random().nextInt(100);
+  print(rannum);
+
+  print("Enter your Name");
+  String? nam = stdin.readLineSync();
+  print("Hy $nam!");
 }

@@ -1,5 +1,5 @@
 import 'dart:math';
-import 'dart:io';
+import 'math_utils.dart';
 
 class Person {
   String name;
@@ -139,7 +139,6 @@ void main() async {
   int rannum = Random().nextInt(100);
   print(rannum);
 
-  print("Enter your Name");
-  String? nam = stdin.readLineSync();
-  print("Hy $nam!");
+  double result1 = multi(4, 9);
+  print(result1);
 }
